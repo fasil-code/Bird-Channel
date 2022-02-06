@@ -1,11 +1,37 @@
-import React from 'react';
-import Navbar from '../../components/Navbar/Navbar';
-const Home = () => {
-  return <div>
-<Navbar />
+import React from "react";
 
+import "./Home.css";
+import images from "../../constants/images";
+import Home from "./imageslider";
 
-  </div>;
+const Homek = () => {
+  return (
+    <div className=" big app__bg  app__wrapper">
+      <div className="carosel">
+
+    \<Home />
+
+    <div class="row">
+      
+      <input
+        type="text"
+        class="form-control search-slt"
+        placeholder="Enter bird name"
+      />
+    
+
+   
+      <button type="button" class="btn btn-danger wrn-btn">
+        Search
+      </button>
+  
+    
+  </div>
+      </div>
+      
+      
+   
+    </div>
+  );
 };
-
-export default Home;
+export default Homek;

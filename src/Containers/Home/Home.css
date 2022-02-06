@@ -1,0 +1,21 @@
+.carosel{
+
+    height:70vh;
+    width:100%;
+   
+   margin-top:0;
+}
+.big{
+    display:flex;
+    flex-direction: column;
+}
+.row{
+  
+ margin-top:3rem;
+    justify-content: center;
+    display:flex;
+   
+}
+.row input{
+    width:600px;
+}
