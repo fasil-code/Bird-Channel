@@ -1,5 +1,7 @@
 import React,{ useState } from "react";
 import "./Navbar.css";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { ImCross} from "react-icons/im";
 import images from "../../constants/images";
 function Navbar(props){
    const [toogleMenu, setToogle] = useState(false);
@@ -10,19 +12,30 @@ function Navbar(props){
    </a>
    <div className="app__navbar_links flex__center">
    
-<p className="app__openans"><a href="#">Home</a></p>
-<p  className="app__openans"><a href="#">About</a></p>
-<p  className="app__openans"><a href="#">Manual</a></p>
-<p  className="app__openans"><a href="#">Contact us</a></p>
+<p className="app__openans"><a href="#home">Home</a></p>
+<p  className="app__openans"><a href="#about">About</a></p>
+<p  className="app__openans"><a href="#manual">Manual</a></p>
+<p  className="app__openans"><a href="#contact">Contact us</a></p>
    </div>
-   <div style={{cursor:"pointer"  }} className="app__navbar-hamburger flex__center">
 
-<p color ="white" onClick={() => setToogle(true)}><img src={images.hamburg} ></img></p>
-</div>
+
+   <GiHamburgerMenu
+   className="app__navbar-hamburger"
+          color="#9c7b17"
+          fontSize={27}
+          onClick={() => setToogle(true)}
+        />
+
 {
    toogleMenu && (
       <div className="app__navbar_overlay" >
-<div className="wrapper"><close  onClick={() => setToogle(false)} ><img src={images.xi}></img></close></div>
+      <ImCross
+     
+      color="#9c7b17"
+              fontSize={27}
+              className="overlay__close"
+              onClick={() => setToogle(false)}
+            />
 <div className="app__mobile-links">
 <p className="app__mobile-openans" style={{transform:"none"}}><a href="#">Home</a></p>
 <p  className="app__mobile-openans"><a href="#about">About</a></p>

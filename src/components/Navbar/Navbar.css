@@ -76,6 +76,11 @@ text-decoration: none;
   
   
 }
+.app__navbar-hamburger img{
+filter:grayscale(0);
+font-size: 32px;
+   
+}
 .app__mobile-links{
 
 
@@ -98,11 +103,13 @@ justify-content: center;
     font-weight:bolder;
     color: var(--color-golden);
 }
-.wrapper{
-    display:flex;
-justify-content:right;
-font-weight:100;
-cursor:pointer
+.overlay__close{
+    font-size: 27px;
+    color: var(--color-golden);
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 @media (max-width:2000px){
     .app__navbar_logo img{
