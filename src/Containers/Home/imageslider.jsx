@@ -20,14 +20,18 @@ const Home = () => {
 return (
  
 <Carousel {...setting} >
-<Wrap>
-              <img src={images.slider1}></img>
+<Wrap className='wrap'>
+              <img className='wrap-bg' src={images.slider1}></img>
+              <img className='wrap-sm'  src={images.slidera}></img>
           </Wrap> 
-          <Wrap>
-              <img src={images.slider2}></img>
+          <Wrap  className='wrap'>
+         
+              <img className='wrap-bg' src={images.slider2}></img>
+              <img className='wrap-sm'  src={images.sliderb}></img>    
           </Wrap>  
-          <Wrap>
-              <img src={images.slider3}></img>
+          <Wrap  className='wrap'>
+              <img className='wrap-bg' src={images.slider3}></img>
+              <img className='wrap-sm'  src={images.sliderc}></img>
           </Wrap>  
 </Carousel>
   
@@ -37,7 +41,7 @@ const Carousel=styled(Slider)`
 margin:0 50px;
 margin-top:0;
 .slick-list{
-overflow:visible;
+overflow:hidden;
 }
 button{
     z-index:1;
@@ -47,7 +51,20 @@ button{
 li.slick-active button:before{ 
  color:white;  
 }
-
+@media (max-width: 950px) {
+   height:550px;
+   margin:0 20px;
+   .wrap{
+    height:550px;   
+   }
+}
+@media (max-width: 650px) {
+   height:250px;
+   margin:0 20px;
+   .wrap{
+    height:250px;   
+   }
+}
 `
 const Wrap=styled.div`
 img{
@@ -62,7 +79,29 @@ img{
     &:hover{
         cursor:pointer;
 border:4px solid rgba(249,249,249,0.8);
+
+    }
+ 
+
+
+ 
+
+    
+}
+.wrap-sm{
+    display:none;
+  }
+  @media screen and (max-width: 850px) {
+    .wrap-bg{
+        display:none;
+        
+    }
+    .wrap-sm{
+        display:flex;
     }
 }
+
+
 `
+
 export default Home;

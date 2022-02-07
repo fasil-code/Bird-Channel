@@ -9,19 +9,19 @@ const Homek = () => {
     <div className=" big app__bg  app__wrapper">
       <div className="carosel">
 
-    \<Home />
+    <Home />
 
     <div class="row">
       
       <input
         type="text"
-        class="form-control search-slt"
+        class=" input form-control search-slt"
         placeholder="Enter bird name"
       />
     
 
    
-      <button type="button" class="btn btn-danger wrn-btn">
+      <button type="button" class=" btn btn-danger wrn-btn">
         Search
       </button>
   

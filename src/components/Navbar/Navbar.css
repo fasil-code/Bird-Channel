@@ -91,7 +91,7 @@ padding-right:10px;
   color: var(--color-golden);
 }
 .overlay__close {
-  font-size: 27px;
+  font-size: 25px;
   color: var(--color-golden);
   cursor: pointer;
   position: absolute;
@@ -119,5 +119,9 @@ padding-right:10px;
   .app__navbar-hamburger {
     display: flex;
   }
+  .app__navbar_logo img{
+    width:90px;
+  }
 }
+
 

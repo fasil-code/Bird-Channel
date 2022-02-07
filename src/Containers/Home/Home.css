@@ -5,6 +5,7 @@
    
    margin-top:0;
 }
+
 .big{
     display:flex;
     flex-direction: column;
@@ -16,6 +17,24 @@
     display:flex;
    
 }
-.row input{
+.input{
     width:600px;
+   
+   
 }
+@media (max-width:750px) {
+    .input {
+margin-left:1.5rem ;
+
+margin-right:1.5rem;
+} 
+button{
+    margin-top:0.5rem;
+    margin-bottom:1rem;
+} 
+.big{
+    min-height:auto;
+  
+}
+}
+

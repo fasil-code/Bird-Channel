@@ -28,7 +28,7 @@ function Navbar(props) {
       <GiHamburgerMenu
         className="app__navbar-hamburger"
         color="white"
-        fontSize={40}
+        fontSize={30}
        
         onClick={() => setToogle(true)}
       />
@@ -37,7 +37,7 @@ function Navbar(props) {
         <div className="app__navbar_overlay">
           <ImCross
             color="white"
-            fontSize={40}
+            fontSize={25}
             className="overlay__close"
             onClick={() => setToogle(false)}
           />
