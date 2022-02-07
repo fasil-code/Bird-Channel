@@ -1,0 +1,6 @@
+.ap__card{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    flex:1;
+}

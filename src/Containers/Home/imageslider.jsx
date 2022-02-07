@@ -73,6 +73,7 @@ img{
     border-radius:4px;
     width:100%;
     height:60vh;
+    object-fit: cover;
     box-shadow:rgb(0 0 0 / 100%) 0px 26px 30px -10px,
     rgb(0 0 0 / 73%) 0px 16px 10px -10px;
     transition-duration:600ms;
