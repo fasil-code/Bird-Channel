@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Card.css"
-import images from '../../../constants/images';
+import images from "../../constants/images" 
 function Card() {
   return(
   
@@ -17,8 +17,7 @@ function Card() {
         </h4>
         <p>
           An exploration into the truck's polarising design
-        </p>
-       
+        </p>      
       </div>
     </div>
     

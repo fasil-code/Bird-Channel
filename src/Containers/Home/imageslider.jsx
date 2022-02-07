@@ -33,6 +33,10 @@ return (
               <img className='wrap-bg' src={images.slider3}></img>
               <img className='wrap-sm'  src={images.sliderc}></img>
           </Wrap>  
+          <Wrap  className='wrap'>
+              <img className='wrap-bg' src={images.slider4}></img>
+              <img className='wrap-sm'  src={images.sliderc}></img>
+          </Wrap> 
 </Carousel>
   
 )
@@ -78,8 +82,8 @@ img{
     rgb(0 0 0 / 73%) 0px 16px 10px -10px;
     transition-duration:600ms;
     &:hover{
-        cursor:pointer;
-border:4px solid rgba(249,249,249,0.8);
+    cursor:pointer;
+border:4px solid rgb(255,255,255);
 
     }
  

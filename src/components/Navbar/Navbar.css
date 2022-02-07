@@ -1,5 +1,5 @@
 .app__navbar {
-  min-height: 60px;
+  min-height: 70px;
 
   padding: 0px 10px;
   display: flex;
@@ -13,10 +13,12 @@
 .app__navbar_logo {
   width: 50px;
   padding-top: 10px;
+  
 }
 .app__navbar_logo img {
-  color: var(--color-white);
+  
   filter: brightness(100%) opacity(100%);
+  vertical-align:middle;
 }
 .app__navbar_links {
   display: flex;
@@ -110,6 +112,9 @@ padding-right:10px;
   }
 }
 @media (max-width: 800px) {
+  .app__navbar{
+    min-width: 40px;
+  }
   .app__navbar_links {
     display: none;
   }
