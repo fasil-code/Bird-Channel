@@ -24,3 +24,8 @@ a {
   color: unset;
   text-decoration: none;
 }
+
+@font-face {
+  font-family: 'Arial Rounded MT Bold';
+  src: url('./assets/Arial Rounded MT Bold.woff') format('woff');
+}
