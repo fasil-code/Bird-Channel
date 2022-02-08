@@ -23,16 +23,17 @@
    
    
 }
-@media (max-width:750px) {
+@media (max-width:950px) {
     .input {
 margin-left:1.5rem ;
 
 margin-right:1.5rem;
 } 
-.btn{
+/* .btn{
     margin-top:0.5rem;
     margin-bottom:1rem;
-} 
+  
+}  */
 .big{
     min-height:auto;
   

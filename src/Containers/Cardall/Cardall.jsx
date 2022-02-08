@@ -4,7 +4,7 @@ import "./s.css"
 function Cardall() {
   return (
   
-     <div className='app__bg  ap__card'>
+     <div className='  ap__card'>
  
  <Card 
 tag="Finding"
@@ -23,6 +23,7 @@ title="Birding Basics"
 content="fckkdfgfndm,dn hjdjf"
 
 /> 
+
   </div>
 
   );

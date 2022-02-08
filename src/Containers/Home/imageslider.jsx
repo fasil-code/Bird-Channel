@@ -55,14 +55,14 @@ button{
 li.slick-active button:before{ 
  color:white;  
 }
-@media (max-width: 950px) {
+${'' /* @media (max-width: 950px) {
    height:550px;
    margin:0 20px;
    .wrap{
     height:550px;   
    }
-}
-@media (max-width: 650px) {
+} */}
+@media (max-width: 950px) {
    height:250px;
    margin:0 20px;
    .wrap{
