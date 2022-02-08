@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Card.css"
 import images from "../../constants/images" 
-function Card() {
+function Card(props) {
   return(
   
     <div class="container">
@@ -10,16 +10,17 @@ function Card() {
         <img src={images.sliderc} alt="rover" />
       </div>
       <div class="card-body">
-        <span class="tag tag-teal">Technology</span>
-        <h4>
-          Why is the Tesla Cybertruck designed the way it
-          is?
-        </h4>
+        <span class="tag tag-teal">{props.tag}</span>
+        <h3>
+        {props.title}
+        </h3>
         <p>
-          An exploration into the truck's polarising design
+      {props.content}
         </p>      
       </div>
+      <button className="custom__button">View More</button>
     </div>
+   
     
       </div>
    

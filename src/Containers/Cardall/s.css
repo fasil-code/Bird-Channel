@@ -1,6 +1,9 @@
+
 .ap__card{
     display:flex;
     flex-direction: row;
-    justify-content:center;
-    flex:1;
+    justify-content:space-around;
+    padding:2rem 10rem;
+ background:url('../../assets/green.jpg');
+    /* margin:2rem 0; */
 }

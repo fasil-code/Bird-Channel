@@ -3,13 +3,28 @@ import Card from "../../components/Card/Card"
 import "./s.css"
 function Cardall() {
   return (
-    
-     <div className='ap__card'>
+  
+     <div className='app__bg  ap__card'>
  
-<Card />
-<Card />
-<Card />
+ <Card 
+tag="Finding"
+title="Find Birds"
+content="ckkdfgfndm,dn hjdjf"
+
+/>
+<Card 
+tag="Conservation"
+title="Conserving Birds"
+content="kkdfgfndm,dn hjdjf"
+
+/><Card 
+tag="Birding"
+title="Birding Basics"
+content="fckkdfgfndm,dn hjdjf"
+
+/> 
   </div>
+
   );
 }
 

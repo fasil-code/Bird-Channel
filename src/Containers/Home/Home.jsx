@@ -21,7 +21,7 @@ const Homek = () => {
     
 
    
-      <button type="button" class=" btn btn-danger wrn-btn">
+      <button type="button" class=" btn btn btn-danger wrn-btn">
         Search
       </button>
   
