@@ -1,18 +1,19 @@
 
 .ap__card{
-display:grid;
-
-  grid-template-columns: repeat(auto-fill, 350px);
+ 
+  display: grid;
+   grid-template-columns: repeat(3, 0.2fr);
 justify-content: center;
     
-  grid-row-gap:25px; 
- background:url('../../assets/green.jpg');
+
+ background:url('../../assets/wood2.jpg');
     padding:2rem 0;
 }
- @media (max-width:340px){
+
+ @media (max-width:900px){
     .ap__card{
-      
-   justify-content: center;
+      grid-template-columns: repeat(1, 0.2fr);
+   
     }
    
     

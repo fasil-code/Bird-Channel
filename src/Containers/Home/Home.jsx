@@ -3,9 +3,13 @@ import React from "react";
 import "./Home.css";
 import images from "../../constants/images";
 import Home from "./imageslider";
-
+import Navbar from "../../components/Navbar/Navbar"
+import Footer from '../../components/Footer/Footer';
+import Cardall from "../Cardall/Cardall";
 const Homek = () => {
   return (
+    <div>
+  <Navbar />
     <div className=" big app__bg  app__wrapper">
       <div className="carosel">
 
@@ -31,6 +35,9 @@ const Homek = () => {
       
       
    
+    </div>
+    <Cardall />
+    <Footer />
     </div>
   );
 };

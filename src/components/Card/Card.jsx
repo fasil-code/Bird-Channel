@@ -10,7 +10,7 @@ function Card(props) {
         <img src={images.sliderc} alt="rover" />
       </div>
       <div class="card-body">
-        <h3>
+        <h3 className='h3'>
         {props.title}
         </h3>
         <p>
