@@ -1,20 +1,12 @@
 import React from 'react';
 import Navbar from "../../components/Navbar/Navbar"
 import Footer from '../../components/Footer/Footer';
-import YoutubeEmbed from "../../components/Video/Video"
+import Video from '../../components/videocard/Video';
 function Birding() {
   return (
-  
-  
   <div>
 <Navbar />
-<div className='app__vd' >
-<YoutubeEmbed embedId="rokGy0huYEA" />
-<YoutubeEmbed embedId="rokGy0huYEA" /><YoutubeEmbed embedId="rokGy0huYEA" />
-<YoutubeEmbed embedId="rokGy0huYEA" />
-<YoutubeEmbed embedId="rokGy0huYEA" />
-<YoutubeEmbed embedId="rokGy0huYEA" />
-</div>
+<Video />
 <Footer />
   </div>
   );

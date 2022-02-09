@@ -1,0 +1,28 @@
+.video-responsive {
+    padding:1rem 1rem;
+
+ color:white;
+   margin: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  height: 300px;
+  box-shadow:rgb(126, 125, 125) 10px 10px 30px -10px,
+  rgba(233, 197, 197, 0.73) 0px 16px 10px -10px;
+  transition-duration:600ms;
+  overflow: hidden;
+  width: 270px;
+  background-color: rgb(2, 1, 1);
+
+  }
+  
+  .video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 70%;
+    width:100%;
+    align-items: center;
+    border:1px solid white;
+    border-radius: 10px;
+ 
+  }
+  
