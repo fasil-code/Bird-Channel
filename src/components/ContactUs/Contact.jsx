@@ -67,46 +67,43 @@ function Contact() {
                 </form>
               </div>
             </div>
+            <div class="container">
             <div class="row" >      
                   <div class="col-lg-4 col-md-4">
                 <div class="card-body d-flex align-items-center c-detail">
-                  <div class="mr-3 align-self-center">
-                  <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon1.png"/>
-                  </div>
-                  <div class="">
+                  <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon1.png" height="75px"/>
+                  <br/>
                     <h6 class="font-weight-medium">Adress</h6>
                     <p class="font-weight-bold ">qazigund
                       <br/>Anantnag</p>
-                  </div>
                 </div>
               </div>
               <div class="col-lg-4 col-md-4">
                 <div class="card-body d-flex align-items-center c-detail">
-                  <div class="mr-3 align-self-center">
-                    <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon2.png" />
-                  </div>
-                  <div class="">
+                    <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon2.png" height="75px"/>
+                    <br/>
                     <h6 class="font-weight-medium">Phone</h6>
                     <p class="font-weight-bold">251 546 9442
                       <br/> 630 446 8851</p>
-                  </div>
                 </div>
               </div>
               <div class="col-lg-4 col-md-4">
                 <div class="card-body d-flex align-items-center c-detail">
-                  <div class="mr-3 align-self-center">
-                    <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon3.png"/>
-                  </div>
-                  <div class="">
-                    <h6 class="font-weight-medium align-items-center">.....Email</h6>
+                    <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon3.png" height="75px"/>
+                    <br/>
+                    <h6 class="font-weight-medium align-items-center">Email</h6>
                     <p class="font-weight-bold">
                       info@wrappixel.com
                       <br/> 123@wrappixel.com
                     </p>
-                  </div>
                 </div>
               </div>
             </div>
+            </div>
+
+
+
+
             </div>
     </div>
     </div>
