@@ -1,28 +1,50 @@
 .video-responsive {
     padding:1rem 1rem;
-
- color:white;
+background-image:url('../../assets/wood3.jpg');
+ color:black;
    margin: 10px;
   background-color: #fff;
   border-radius: 10px;
-  height: 300px;
-  box-shadow:rgb(126, 125, 125) 10px 10px 30px -10px,
-  rgba(233, 197, 197, 0.73) 0px 16px 10px -10px;
+  height: 450px;
+  box-shadow:rgb(0 0 0 / 100%) 30px 26px 30px -10px,
+  rgb(0 0 0 / 73%) 0px 16px 10px -10px;
   transition-duration:600ms;
   overflow: hidden;
-  width: 270px;
-  background-color: rgb(2, 1, 1);
+  width: 500px;
+  background-color:#fff !important;
 
   }
   
   .video-responsive iframe {
     left: 0;
     top: 0;
-    height: 70%;
+    height: 75%;
     width:100%;
     align-items: center;
     border:1px solid white;
     border-radius: 10px;
  
+  }
+  @media (max-width:600px){
+    .video-responsive{
+      width:380px;
+      height:350px;
+      padding-bottom:2rem;
+      margin-left:0.5rem;
+      margin-right:0.5rem;
+    }
+  }
+  @media (max-width:370px){
+    .video-responsive{
+      width:270px;
+      height:300px;
+      padding-bottom:4rem;
+      margin-left:0.5rem;
+      margin-right:0.5rem;
+    }
+    .video-responsive iframe{
+      height:170px;
+    }
+  
   }
   

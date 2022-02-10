@@ -30,8 +30,8 @@ return (
               <img className='wrap-sm'  src={images.sliderb}></img>    
           </Wrap>  
           <Wrap  className='wrap'>
-              <img className='wrap-bg' src={images.slider3}></img>
-              <img className='wrap-sm'  src={images.sliderc}></img>
+              <img className=' wrap-bg' src={images.slider3}></img>
+              <img className=' wrap-sm'  src={images.sliderc}></img>
           </Wrap>  
           <Wrap  className='wrap'>
               <img className='wrap-bg' src={images.slider4}></img>
@@ -63,10 +63,22 @@ ${'' /* @media (max-width: 950px) {
    }
 } */}
 @media (max-width: 950px) {
-   height:250px;
+   height:320px;
    margin:0 20px;
    .wrap{
-    height:250px;   
+    height:300px; 
+    transition:none;  
+  
+    padding-left:0;
+   }
+   .wrap img{
+    max-width: 100%;
+  width: auto   9;
+  height: 100%;
+  vertical-align: middle;
+box-shadow:none;
+
+  -ms-interpolation-mode: bicubic;
    }
 }
 `
@@ -77,10 +89,10 @@ img{
     border-radius:4px;
     width:100%;
     height:60vh;
-    object-fit: cover;
+   object-fit:cover;
     box-shadow:rgb(0 0 0 / 100%) 0px 26px 30px -10px,
     rgb(0 0 0 / 73%) 0px 16px 10px -10px;
-    transition-duration:600ms;
+    ${'' /* transition-duration:600ms; */}
     &:hover{
     cursor:pointer;
 border:4px solid rgb(255,255,255);
@@ -96,13 +108,15 @@ border:4px solid rgb(255,255,255);
 .wrap-sm{
     display:none;
   }
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: 950px) {
     .wrap-bg{
         display:none;
         
     }
     .wrap-sm{
-        display:flex;
+        max-width:100%;
+        display:block;
+        
     }
 }
 

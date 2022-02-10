@@ -13,7 +13,7 @@ justify-content: center;
  @media (max-width:900px){
     .ap__card{
       grid-template-columns: repeat(1, 0.2fr);
-   
+  
     }
    
     

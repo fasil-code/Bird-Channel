@@ -15,7 +15,10 @@ const Homek = () => {
 
     <Home />
 
-    <div class="row">
+   
+      
+      
+      <div class="row">
       
       <input
         type="text"
@@ -25,15 +28,13 @@ const Homek = () => {
     
 
    
-      <button type="button" class=" btn btn btn-danger wrn-btn">
+    <button type="button" class=" btn btn btn-danger wrn-btn">
         Search
       </button>
   
     
   </div>
-      </div>
-      
-      
+  </div>
    
     </div>
     <Cardall />

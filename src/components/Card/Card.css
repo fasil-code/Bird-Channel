@@ -85,8 +85,9 @@ height:440px;
 display: flex;
 margin-left:auto;
 margin-right:auto;
-padding : 0 0.5rem; 
+padding : 0 0.2rem; 
 cursor:pointer;
+padding:10px 5px;
   }
   .h3{
     font-size: 24px;
@@ -97,6 +98,10 @@ cursor:pointer;
   }
   .card-header img{
     padding:0 0;
+    width:100%;
+  }
+  .card:hover{
+    transform: none;
   }
  
 } 
