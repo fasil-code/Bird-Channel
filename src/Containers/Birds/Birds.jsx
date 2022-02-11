@@ -6,7 +6,7 @@ import "./Birds.css"
 import Card from '../../components/Card/Card'
 function Birds() {
   return (
-    <div>
+    <div className="app__bird">
 <Navbar/>
 <div className='header '>
 <h1 className='centered'>Find a Bird of Category</h1>

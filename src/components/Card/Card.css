@@ -80,11 +80,11 @@ card {
 }
 @media (max-width:950px){
   .card{
-width:390px;
-height:440px;
+width:360px;
+height:470px;
 display: flex;
-margin-left:auto;
-margin-right:auto;
+margin-left:7px;
+margin-right:7px;
 padding : 0 0.2rem; 
 cursor:pointer;
 padding:10px 5px;

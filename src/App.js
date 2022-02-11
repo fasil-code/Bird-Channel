@@ -4,14 +4,41 @@ import Birding from './Containers/Birding/Birding';
 import Homek from './Containers/Home/Home';
 import Contactm from './Containers/Contactm/Contactm';
 import Birds from './Containers/Birds/Birds';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
-   {/* <Homek /> */}
-   { /*<Birding/>*/ }
-  {/* { <Contactm/> }  */}
-  <Birds />
-    </div>
+    <Routes>
+          <Route path="/" element={<Homek />} />
+          <Route
+            path="/contact"
+            element={<Contactm/>}
+          />
+           <Route
+            path="/#contact"
+            element={<Contactm/>}
+            
+          />
+           <Route
+            path="/#contact"
+            element={<Contactm/>}
+            
+          />
+           <Route
+            path="/#contact"
+            element={<Contactm/>}
+            
+          />
+           <Route
+            path="/#contact"
+            element={<Contactm/>}
+            
+          />
+        
+        </Routes>
+        </div>
+    </BrowserRouter>
   );
 }
 

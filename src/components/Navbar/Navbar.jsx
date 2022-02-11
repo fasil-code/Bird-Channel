@@ -3,6 +3,7 @@ import "./Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
 import images from "../../constants/images";
+import { Link } from "react-router-dom";
 function Navbar(props) {
   const [toogleMenu, setToogle] = useState(false);
   return (
@@ -12,7 +13,7 @@ function Navbar(props) {
       </a>
       <div className="app__navbar_links flex__center">
         <p className="app__openans">
-          <a href="#home">Home</a>
+        <Link to="/">Home</Link>
         </p>
         <p className="app__openans">
           <a href="#about">About</a>
@@ -21,7 +22,7 @@ function Navbar(props) {
           <a href="#manual">Manual</a>
         </p>
         <p className="app__openans">
-          <a href="#contact">Contact us</a>
+          <Link to="/contact">Contact us </Link>
         </p>
       </div>
 
