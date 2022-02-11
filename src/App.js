@@ -16,18 +16,18 @@ function App() {
             element={<Contactm/>}
           />
            <Route
-            path="/#contact"
-            element={<Contactm/>}
+            path="/bird"
+            element={<Birds/>}
             
           />
            <Route
-            path="/#contact"
-            element={<Contactm/>}
+            path="/conservation"
+            element={<Birding/>}
             
           />
            <Route
-            path="/#contact"
-            element={<Contactm/>}
+            path="/birding"
+            element={<Birding/>}
             
           />
            <Route
