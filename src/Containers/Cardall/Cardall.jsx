@@ -22,7 +22,7 @@ to="/conservation"
 <Card 
 tag="Conservation"
 title="Conserving Birds"
-content="Learn the science of creating healthy home for birds.
+content="Learn the science of creating home for birds.
 Birds are indicators of environment.If they are in trouble, we soon all will be in trouble
 "
 

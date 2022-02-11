@@ -27,6 +27,7 @@ card {
   transition-duration:600ms;
   overflow: hidden;
   width: 300px;
+  background: url('../../assets/wood3.jpg');
 
   
 }
@@ -36,7 +37,7 @@ card {
     rgba(8, 6, 6, 0.73) 0px 16px 10px -10px; */
     transform:scale(1.05);
   cursor:pointer;
-  border:4px solid gold;
+
   text-decoration: none;
 }
 .card-header img {
