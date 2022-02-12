@@ -4,12 +4,15 @@ import Birding from './Containers/Birding/Birding';
 import Homek from './Containers/Home/Home';
 import Contactm from './Containers/Contactm/Contactm';
 import Birds from './Containers/Birds/Birds';
+import Admin from './Containers/Admin/Admin';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Navbar from './components/Navbar/Navbar';
 function App() {
   return (
-    <BrowserRouter>
+  <BrowserRouter>
     <div className="App">
-    <Routes>
+   
+<Routes>
           <Route path="/" element={<Homek />} />
           <Route
             path="/contact"
@@ -25,9 +28,14 @@ function App() {
             element={<Birding/>}
             
           />
-           <Route
+              <Route
             path="/birding"
             element={<Birding/>}
+            
+          />
+           <Route
+            path="/admin"
+            element={<Admin/>}
             
           />
            <Route
@@ -36,9 +44,10 @@ function App() {
             
           />
         
-        </Routes>
+        </Routes> 
+    
         </div>
-    </BrowserRouter>
+        </BrowserRouter>
   );
 }
 

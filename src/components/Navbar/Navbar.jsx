@@ -19,7 +19,7 @@ function Navbar(props) {
           <a href="#about">About</a>
         </p>
         <p className="app__openans">
-          <a href="#manual">Manual</a>
+          <a href="/admin">Admin</a>
         </p>
         <p className="app__openans">
           <Link to="/contact">Contact us </Link>
@@ -44,16 +44,16 @@ function Navbar(props) {
           />
           <div className="app__mobile-links">
             <p className="app__mobile-openans" style={{ transform: "none" }}>
-              <a href="#">Home</a>
+              <Link to="/" href="#">Home</Link>
             </p>
             <p className="app__mobile-openans">
               <a href="#about">About</a>
             </p>
             <p className="app__mobile-openans">
-              <a href="#manual">Manual</a>
+              <a href="/admin">Admin</a>
             </p>
             <p className="app__mobile-openans">
-              <a href="#contact">Contact us</a>
+              <Link to="/contact">Contact us</Link>
             </p>
           </div>
         </div>
