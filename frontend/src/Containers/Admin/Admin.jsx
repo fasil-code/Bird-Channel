@@ -14,18 +14,16 @@ const Admin = () => {
   const [desc, setdesc] = useState("");
   const [image, setimage] = useState("");
 const addCard=()=>{
-Axios.post('http://localhost:3001/admin',{
-b_name:birdName,
-b_cname:commonName,
-b_food:food,
-b_prey:prey,
-b_habitat:habitat,
-b_desc:desc,
-b_image:image,
-b_categ:Category,
-
-
-}).then(()=>{
+    const data = new FormData()
+    data.append('b_name', birdName)
+    data.append('b_cname', commonName)
+    data.append('b_food', food)
+    data.append('b_prey', prey)
+    data.append('b_habitat', habitat)
+    data.append('b_desc', desc)
+    data.append('b_image', image.selectedFile)
+    data.append('b_categ', Category)
+Axios.post('http://localhost:3001/admin', data).then(()=>{
 console.log("suces");
 })
 }
@@ -114,6 +112,7 @@ console.log("suces");
                             id="myfile"
                             name="myfile"
                             accept="image/*"
+                            onChange={(event)=>{setimage({selectedFile: event.target.files[0],})}}
                           />
                         </div>
 
