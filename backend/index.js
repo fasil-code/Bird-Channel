@@ -38,7 +38,7 @@ const desc=req.body.desc
 
 con.query(
   "INSERT INTO birdsall (birdName,Category,commonName,food,prey,habitat,desc) VALUES (?,?,?,?,?,?,?)",
-[birdName,Category,commonName,food,prey,habitat,desc],
+[birdName,Category,commonName,food,prey,habitat,`desc`],
 (err,result)=>{
   if(err)console.log(err);
   else{
