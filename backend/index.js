@@ -11,8 +11,8 @@ app.use(express.json());
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "Zargar@123",
-  database:"birdsdb"
+  password: "toor",
+  database:"birdschannel"
 });
 
 con.connect(function(err) {
@@ -28,17 +28,18 @@ con.connect(function(err) {
     // });
 
   app.post('/admin',(req,res)=>{
-const birdName=req.body.birdName
-const commonName=req.body.commonName
-const Category=req.body.Category
-const food=req.body.food
-const prey=req.body.prey
-const habitat=req.body.habitat
-const desc=req.body.desc
+  const b_name = req.body.b_name;
+  const b_cname = req.body.b_cname;
+  const b_food = req.body.b_food;
+  const b_prey = req.body.b_prey;
+  const b_habitat = req.body.b_habitat;
+  const b_desc = req.body.b_desc;
+  const b_image = req.body.b_image;
+  const b_categ = req.body.b_categ;
 
 con.query(
-  "INSERT INTO birdsall (birdName,Category,commonName,food,prey,habitat,desc) VALUES (?,?,?,?,?,?,?)",
-[birdName,Category,commonName,food,prey,habitat,`desc`],
+  "INSERT INTO birds (b_name, b_cname, b_food, b_prey, b_habitat, b_desc, b_image, b_categ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+[b_name, b_cname, b_food, b_prey, b_habitat, b_desc, b_image, b_categ],
 (err,result)=>{
   if(err)console.log(err);
   else{
