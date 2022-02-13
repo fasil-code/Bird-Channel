@@ -2,6 +2,7 @@ import React from 'react';
 import Card from "../../components/Card/Card"
 import "./s.css"
 import { Link } from 'react-router-dom';
+
 function Cardall() {
   return (
   

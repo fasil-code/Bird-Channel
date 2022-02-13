@@ -4,7 +4,12 @@ import Navbar from '../../components/Navbar/Navbar'
 import images from '../../constants/images'
 import "./Birds.css"
 import Card from '../../components/Card/Card'
+import Axios from "axios"
+import { useState } from 'react'
+
 function Birds() {
+
+
   return (
     <div className="app__bird">
 <Navbar/>
@@ -13,6 +18,8 @@ function Birds() {
 <img src={images.wood2}></img>
 </div>
 <div className='bird'>
+
+{/* <Card />
 <Card />
 <Card />
 <Card />
@@ -21,10 +28,9 @@ function Birds() {
 <Card />
 <Card />
 <Card />
-<Card />
-<Card />
-<Card />
-<Card />
+<Card /> */}
+{/* <Card />
+<Card /> */}
 </div>
 <Footer/>
 
