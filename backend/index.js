@@ -12,7 +12,7 @@ var con = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "toor",
-  database:"birdschannel"
+  database:"birdchannel"
 });
 
 con.connect(function(err) {
@@ -52,7 +52,17 @@ con.query(
   });
 
 
+  app.get('/getcategories',(req,res)=>{
 
+
+var sql = "SELECT c_id, c_name FROM categories;";
+  con.query(sql, function (err, result, fields) {
+    if (err) throw err;
+    res.send(result);
+  });
+     
+ 
+  });
 
 
 

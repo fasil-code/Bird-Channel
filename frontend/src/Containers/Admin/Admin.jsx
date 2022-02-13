@@ -12,15 +12,17 @@ const Admin = () => {
   const [prey, setprey] = useState("");
   const [habitat, sethabitat] = useState("");
   const [desc, setdesc] = useState("");
+  const [image, setimage] = useState("");
 const addCard=()=>{
 Axios.post('http://localhost:3001/admin',{
-birdName:birdName,
-commonName:commonName,
-Category:Category,
-food:food,
-prey:prey,
-habitat:habitat,
-desc:desc,
+b_name:birdName,
+b_cname:commonName,
+b_food:food,
+b_prey:prey,
+b_habitat:habitat,
+b_desc:desc,
+b_image:image,
+b_categ:Category,
 
 
 }).then(()=>{
