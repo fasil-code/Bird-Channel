@@ -8,7 +8,7 @@ import images from "../../constants/images";
 const Admin = () => {
   const [birdName, setName] = useState("");
   const [Category, setCategory] = useState("");
-  const [commonName, setcommonName] = useState("");
+  const [commonName, setcommonName] = useState(1);
   const [food, setfood] = useState("");
   const [prey, setprey] = useState("");
   const [habitat, sethabitat] = useState("");
@@ -81,9 +81,11 @@ const Admin = () => {
                                 list="hosting-plan"
                                 placeholder="Category"
                                 onChange={(event) => {
-                                setCategory(event.target.value);
+                             setCategory(event.target.value);
                               }}>
+                              <option>Select Category</option>
                                 {categoryList.map((val, key) => {
+                               
                                   return <option value={val.c_id}>{val.c_name}</option>;
                                 })}
                               </select>

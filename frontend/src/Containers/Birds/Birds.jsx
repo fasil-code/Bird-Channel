@@ -26,8 +26,10 @@ function Birds() {
       </div>
       <div className="bird">
         {cardData.map((val, key) => {
+          let value="/bird/categbird?id=" + val.c_id;
           return (
-           <Link to="/categbird">
+          
+           <Link to={value}>
             <Card
           
            title={val.c_name}
