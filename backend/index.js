@@ -23,7 +23,7 @@ const port = 3001
 var con = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "Zargar@123",
+    password: "toor",
     database:"birdchannel"
 });
 
@@ -50,6 +50,7 @@ app.post('/admin', async (req, res) => {
             const b_desc = req.body.b_desc;
             const b_categ = req.body.b_categ;
             const b_image = req.files.b_image;
+            console.log(req.files.b_image)
             const b_image_path = './uploads/birds/' + b_image.name;
             b_image.mv(b_image_path);
 

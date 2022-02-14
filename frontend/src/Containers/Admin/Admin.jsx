@@ -76,17 +76,17 @@ const Admin = () => {
 
                           <div className="col-lg-12">
                             <div className="form-group mt-2">
-                              <input
+                              <select
                                 class="form-control"
                                 list="hosting-plan"
                                 placeholder="Category"
-                                type="text"
-                              />
-                              <datalist id="hosting-plan">
+                                onChange={(event) => {
+                                setCategory(event.target.value);
+                              }}>
                                 {categoryList.map((val, key) => {
-                                  return <option value={val.c_name} />;
+                                  return <option value={val.c_id}>{val.c_name}</option>;
                                 })}
-                              </datalist>
+                              </select>
                             </div>
                           </div>
                         </div>
