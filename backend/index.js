@@ -23,7 +23,7 @@ const port = 3001
 var con = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "Zargar@123",
+    password: "toor",
     database:"birdchannel"
 });
 
@@ -86,6 +86,22 @@ app.get('/bird', (req, res) => {
         res.send(result);
     });
 });
+
+app.post('/getbirds', async (req, res) => {
+    try {
+        const c_id = req.body.c_id;
+
+        const sql = "SELECT b_name, b_cname, b_food, b_prey, b_habitat, b_desc, b_image FROM birds WHERE birds.b_categ = ?;";
+        con.query(sql, [c_id], (err, result) => {
+            if (err) throw err;
+            res.send(result);
+        });
+    } catch (err) {
+        res.status(500).send(err);
+    }
+});
+
+
 app.listen(port, () => {
     console.log(`App is listening on PORT ${port}`)
 });

@@ -24,7 +24,7 @@ function App() {
           <Route path="/birding" element={<Birding />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/#contact" element={<Contactm />} />
-          <Route path="/bird/categbird" element={<Categbird />} />
+          <Route path="/bird/categ" element={<Categbird />} />
        
         </Routes>
       </div>
