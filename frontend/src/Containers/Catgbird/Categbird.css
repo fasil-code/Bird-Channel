@@ -1,4 +1,4 @@
-.app__bird{
+.app__categ{
     overflow-x:hidden;
 }
 .header{
@@ -7,7 +7,7 @@
     color:white;
     height:60vh;
     width:100vw;
-  background-image:url("../../assets/desert.jpg");
+  background-image:url("../../assets/texture.jpg");
     background-position: center;
   backdrop-filter: blur();
   background-size: cover;
@@ -32,7 +32,7 @@
  
     padding:5rem 5rem;
   }
-  .bird{
+  .bird_categ{
   display: grid;
   grid-template-columns: repeat(3, 0.2fr);
   column-gap: 1rem;
@@ -44,7 +44,7 @@ background:url('../../assets/wood.jpg');
 
    padding:2rem 0;
   }
-  .bird a{
+  .bird_categ a{
     text-decoration: none;
     color:black;
   }

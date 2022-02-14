@@ -9,8 +9,9 @@ import slider1 from "../assets/fly.jpg"
 import slider2 from "../assets/fly2.jpg"
 import slider3 from "../assets/fly3.jpg"
 import slider4 from "../assets/fly4.jpg"
+import texture from "../assets/texture.jpg"
 export default {logo,hamburg,xi,slider1,slider2,slider3,
-   slider4, slidera,sliderb,sliderc,desert
+   slider4, slidera,sliderb,sliderc,desert,texture
 
 
 };

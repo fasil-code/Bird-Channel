@@ -8,6 +8,7 @@ import Birds from "./Containers/Birds/Birds";
 import Admin from "./Containers/Admin/Admin";
 import axios from "axios";
 import { useState } from "react";
+import Categbird from "./Containers/Catgbird/Categbird";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 function App() {
@@ -23,6 +24,8 @@ function App() {
           <Route path="/birding" element={<Birding />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/#contact" element={<Contactm />} />
+          <Route path="/categbird" element={<Categbird />} />
+       
         </Routes>
       </div>
     </BrowserRouter>

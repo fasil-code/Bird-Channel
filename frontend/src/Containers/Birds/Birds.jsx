@@ -7,7 +7,7 @@ import Card from "../../components/Card/Card";
 import Axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
-
+import { Link } from "react-router-dom";
 
 function Birds() {
   const [cardData, setCarddata] = useState([]);
@@ -26,9 +26,15 @@ function Birds() {
       </div>
       <div className="bird">
         {cardData.map((val, key) => {
-          return <Card
+          return (
+           <Link to="/categbird">
+            <Card
           
-           title={val.c_name} />;
+           title={val.c_name}
+           content={val.c_desc}
+           />
+           </Link> 
+          )
         })}
      
 

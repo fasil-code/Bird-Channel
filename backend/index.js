@@ -23,7 +23,7 @@ const port = 3001
 var con = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "toor",
+    password: "Zargar@123",
     database:"birdchannel"
 });
 
@@ -80,7 +80,7 @@ app.get('/admin', (req, res) => {
 });
 
 app.get('/bird', (req, res) => {
-    const sql = "SELECT c_id, c_name FROM categories;";
+    const sql = "SELECT c_id, c_name, c_desc FROM categories;";
     con.query(sql, function (err, result, fields) {
         if (err) throw err;
         res.send(result);
