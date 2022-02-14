@@ -20,10 +20,10 @@ function Categbird() {
   const c_id = queryParams.get("id")
 
 Axios.post("http://localhost:3001/getbirds",{
-c_id=c_id
+c_id: c_id
 
-}).then(()=>{
-  console.log("sucses");
+}).then((response)=>{
+  console.log(response.data);
 })
 
   return (
