@@ -16,6 +16,7 @@ app.use(morgan('dev'));
 app.use(fileUpload({
     createParentPath: true
 }));
+app.use(express.static('uploads'))
 
 const port = 3001
 
@@ -96,6 +97,15 @@ app.post('/getbirds', async (req, res) => {
             if (err) throw err;
             res.send(result);
         });
+    } catch (err) {
+        res.status(500).send(err);
+    }
+});
+
+app.post('/getimage', async (req, res) => {
+    try {
+        const path = req.body.path.slice(10);
+        res.send("http://localhost:3001/"+path)
     } catch (err) {
         res.status(500).send(err);
     }
