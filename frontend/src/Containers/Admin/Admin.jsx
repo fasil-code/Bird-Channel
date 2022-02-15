@@ -8,7 +8,7 @@ import images from "../../constants/images";
 const Admin = () => {
   const [birdName, setName] = useState("");
   const [Category, setCategory] = useState("");
-  const [commonName, setcommonName] = useState(1);
+  const [commonName, setcommonName] = useState("");
   const [food, setfood] = useState("");
   const [prey, setprey] = useState("");
   const [habitat, sethabitat] = useState("");
