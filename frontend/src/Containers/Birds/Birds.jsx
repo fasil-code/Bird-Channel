@@ -28,10 +28,9 @@ function Birds() {
         {cardData.map((val, key) => {
           let value="/bird/categ?id=" + val.c_id;
           return (
-          
            <Link to={value}>
             <Card
-          
+           image={"http://localhost:3001/"+val.c_image.slice(10)}
            title={val.c_name}
            content={val.c_desc}
            />

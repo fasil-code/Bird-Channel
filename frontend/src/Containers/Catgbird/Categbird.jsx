@@ -13,7 +13,7 @@ function Categbird() {
   const {id} = useParams();
   const queryParams = new URLSearchParams(window.location.search)
   const c_id = queryParams.get("id")
-  const [imagePath, setimagePath] = useState("");
+
   useEffect((props) => {
     Axios.post("http://localhost:3001/getbirds",{
       c_id: c_id
@@ -22,11 +22,6 @@ function Categbird() {
     })
   }, []);
 
-  useEffect(() => {
-    Axios.post("http://localhost:3001/getimage", {path:imagePath}).then((response) =>
-      setimagePath(response.data)
-    );
-  }, []);
   return (
 
     <div class="app_categ">

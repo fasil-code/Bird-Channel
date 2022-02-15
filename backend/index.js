@@ -24,7 +24,7 @@ const port = 3001
 var con = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "Zargar@123",
+    password: "toor",
     database:"birdchannel"
 });
 
@@ -81,7 +81,7 @@ app.get('/admin', (req, res) => {
 });
 
 app.get('/bird', (req, res) => {
-    const sql = "SELECT c_id, c_name, c_desc FROM categories;";
+    const sql = "SELECT c_id, c_name, c_desc, c_image FROM categories;";
     con.query(sql, function (err, result, fields) {
         if (err) throw err;
         res.send(result);
@@ -97,15 +97,6 @@ app.post('/getbirds', async (req, res) => {
             if (err) throw err;
             res.send(result);
         });
-    } catch (err) {
-        res.status(500).send(err);
-    }
-});
-
-app.post('/getimage', async (req, res) => {
-    try {
-        const path = req.body.path.slice(10);
-        res.send("http://localhost:3001/"+path)
     } catch (err) {
         res.status(500).send(err);
     }
