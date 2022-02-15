@@ -1,6 +1,19 @@
 import React from "react";
 import "./Contact.css";
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 function Contact() {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_2kaoj9d', 'template_gxie59q', form.current, 'user_t0EEMTggmMoWnwulU9ytv')
+      .then((result) => {
+          alert("Suceesfully Contacted")
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
   return (
     <div class="contact3 py-5">
       <div class="row no-gutters">
@@ -17,7 +30,7 @@ function Contact() {
             <div class="col-lg-6">
               <div class="contact-box ml-3">
                 <h1 class="font-weight-bold mt-2">Quick Contact</h1>
-                <form class="mt-4">
+                <form ref={form}  onSubmit={sendEmail} class="mt-4">
                   <div class="row">
                     <div class="col-lg-12">
                       <div class="form-group mt-2">
@@ -25,6 +38,7 @@ function Contact() {
                           class="form-control"
                           type="text"
                           placeholder="name"
+                          name="name"
                         />
                       </div>
                     </div>
@@ -34,6 +48,7 @@ function Contact() {
                           class="form-control"
                           type="email"
                           placeholder="email address"
+                          name="email"
                         />
                       </div>
                     </div>
@@ -43,6 +58,7 @@ function Contact() {
                           class="form-control"
                           type="text"
                           placeholder="phone"
+                          name="phone"
                         />
                       </div>
                     </div>
@@ -52,12 +68,14 @@ function Contact() {
                           class="form-control"
                           rows="3"
                           placeholder="message"
+                          name="message"
                         ></textarea>
                       </div>
                     </div>
                     <div class="col-lg-12">
                       <button
                         type="submit"
+                        value="Send"
                         class="btn btn-danger-gradiant mt-3 text-white border-0 px-3 py-2"
                       >
                         <span> SUBMIT</span>
