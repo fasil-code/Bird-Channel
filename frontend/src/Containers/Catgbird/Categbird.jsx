@@ -10,36 +10,30 @@ import Card from "../../components/Card/Card";
 import { Link } from "react-router-dom";
 function Categbird() {
   const [birdCateg, setbirdCateg] = useState([]);
-  useEffect(() => {
-    Axios.get("http://localhost:3001/bird/categbird").then((response) =>
-      setbirdCateg(response.data)
-    );
-  }, []);
   const {id} = useParams();
   const queryParams = new URLSearchParams(window.location.search)
   const c_id = queryParams.get("id")
-
-Axios.post("http://localhost:3001/getbirds",{
-c_id: c_id
-
-}).then((response)=>{
-  console.log(response.data);
-})
+  useEffect(() => {
+    Axios.post("http://localhost:3001/getbirds",{
+      c_id: c_id
+    }).then((response)=>{
+      setbirdCateg(response.data);
+    })
+  }, []);
 
   return (
 
     <div class="app_categ">
       <Navbar />
-      <h1>Product id: {id}</h1>
       <div className="header ">
-        <h1 className="centered">category</h1>
+        <h1 className="centered">Category Birds</h1>
         <img src={images.texture}></img>
       </div>
       <div className="bird_categ">
         {birdCateg.map((val, key) => {
           return (
             <Link to="/ibird">
-              <Card title={val.c_name} content={val.c_desc} />
+              <Card image={val.b_image} title={val.b_name} content={val.b_desc} />
             </Link>
           );
         })}
