@@ -14,8 +14,8 @@ function Cardall() {
  <Card 
 
 title="Find Birds"
-content=""
-image={images.sliderc}
+content="Explore. Learn. Teach. Share. We have dozens of ways for you to be a part of our mission to study and protect birds"
+image={images.owl}
 />
 </Link>
 <Link
@@ -27,7 +27,7 @@ title="Conserving Birds"
 content="Learn the science of creating home for birds.
 Birds are indicators of environment.If they are in trouble, we soon all will be in trouble
 "
-image={images.sliderc}
+image={images.sp}
 />
 </Link>
 <Link
@@ -38,7 +38,7 @@ tag="Birding"
 title="Birding Basics"
 content="Top tips for becoming a Ladakhi Birder or wildlife guide.
 Adopt the pace of Nature her secret is patience. Birding after all is a game."
-image={images.sliderc}
+image={images.sps}
 /> 
 </Link>
 

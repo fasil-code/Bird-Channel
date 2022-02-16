@@ -93,6 +93,7 @@ img{
     box-shadow:rgb(0 0 0 / 100%) 0px 26px 30px -10px,
     rgb(0 0 0 / 73%) 0px 16px 10px -10px;
     ${'' /* transition-duration:600ms; */}
+    opacity:0.8;
     &:hover{
     cursor:pointer;
 border:4px solid rgb(255,255,255);

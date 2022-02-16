@@ -7,7 +7,7 @@
     color:white;
     height:60vh;
     width:100vw;
-  background-image:url("../../assets/texture.jpg");
+  background-image:url("../../assets/forest-1072828.jpg");
     background-position: center;
   backdrop-filter: blur();
   background-size: cover;
@@ -17,12 +17,13 @@
   overflow-x: hidden;
     overflow-x: hidden;
     object-fit: cover;
+
     
   }
   .header img{
       height:60vh;
       width:100%;
-      opacity: 0.1;
+    opacity:0;
   }
   .centered {
     position: absolute;
@@ -49,7 +50,7 @@ background:url('../../assets/wood.jpg');
     color:black;
   }
   @media (max-width:950px){
-    .bird{
+    .bird_categ{
       grid-template-columns: repeat(1, 0.2fr);
   
     }

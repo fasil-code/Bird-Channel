@@ -28,7 +28,7 @@ function Categbird() {
       <Navbar />
       <div className="header ">
         <h1 className="centered">Category Birds</h1>
-        <img src={images.texture}></img>
+        <img src={images.desert}></img>
       </div>
       <div className="bird_categ">
         {birdCateg.map((val, key) => {

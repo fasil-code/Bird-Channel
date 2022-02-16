@@ -11,7 +11,7 @@ Link{
   text-decoration: none;
 }
 .app__bg {
-background:url("./assets/nat.png");
+background:url("./assets/sunset.jpg");
   background-position: center;
   backdrop-filter: blur();
   background-size: cover;

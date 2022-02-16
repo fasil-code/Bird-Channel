@@ -10,8 +10,11 @@ import slider2 from "../assets/fly2.jpg"
 import slider3 from "../assets/fly3.jpg"
 import slider4 from "../assets/fly4.jpg"
 import texture from "../assets/texture.jpg"
+import sp from "../assets/sp.jpg"
+import sps from "../assets/spa.jpg"
+import owl from "../assets/owl.jpg"
 export default {logo,hamburg,xi,slider1,slider2,slider3,
-   slider4, slidera,sliderb,sliderc,desert,texture
+   slider4, slidera,sliderb,sliderc,desert,texture,owl,sp,sps
 
 
 };

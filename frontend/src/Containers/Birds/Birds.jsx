@@ -20,7 +20,7 @@ function Birds() {
   return (
     <div className="app__bird">
       <Navbar />
-      <div className="header ">
+      <div className="header1 ">
         <h1 className="centered">Find a Bird of Category</h1>
         <img src={images.wood2}></img>
       </div>

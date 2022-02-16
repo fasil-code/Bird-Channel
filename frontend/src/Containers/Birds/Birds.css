@@ -1,13 +1,13 @@
 .app__bird{
     overflow-x:hidden;
 }
-.header{
+.header1{
     position: relative;
     text-align: center;
     color:white;
     height:60vh;
     width:100vw;
-  background-image:url("../../assets/desert.jpg");
+  background-image:url("../../assets/rough.jpg");
     background-position: center;
   backdrop-filter: blur();
   background-size: cover;
@@ -19,7 +19,7 @@
     object-fit: cover;
     
   }
-  .header img{
+  .header1 img{
       height:60vh;
       width:100%;
       opacity: 0.1;
