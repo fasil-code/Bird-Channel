@@ -15,7 +15,7 @@ function Categbird() {
   const c_id = queryParams.get("id")
 
   useEffect((props) => {
-    Axios.post("http://localhost:3001/getbirds",{
+    Axios.post("http://"+window.location.hostname+":3001/getbirds",{
       c_id: c_id
     }).then((response)=>{
       setbirdCateg(response.data);
@@ -35,7 +35,7 @@ function Categbird() {
           let value="/bird/categ/ibird?id=" + val.b_id;
           return (
             <Link to={value}>
-              <Card image={"http://localhost:3001/"+val.b_image.slice(10)} title={val.b_name} content={val.b_desc} />
+              <Card image={"http://"+window.location.hostname+":3001/"+val.b_image.slice(10)} title={val.b_name} content={val.b_desc} />
             </Link>
           );
         })}
