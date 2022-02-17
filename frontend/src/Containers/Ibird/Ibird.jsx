@@ -11,7 +11,7 @@ function Ibird() {
 <div className='bird-img'>
 <img className='ibird-img' src={images.sliderb}></img>
 </div>
-<div className="mid">
+<div className="mide">
 
 </div>
 <div className='text-end'>
@@ -55,6 +55,9 @@ Your browser does not support the audio element.
 </div>
  
 </div>
+
+
+
 <Footer/>
 
     </div>

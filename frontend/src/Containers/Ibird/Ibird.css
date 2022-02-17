@@ -20,7 +20,7 @@
     width:100%;
     object-fit: cover;
 }
-.mid{
+.mide{
     width:1px;
     height:80vh;
     text-decoration: dashed;
@@ -28,15 +28,17 @@
 }
 .text-end h1{
     font-family: var(--font-base);
+    padding:10px;
 }
 .text-end{
 color:var(--color-golden);
-text-align:center;
+text-align: center;
 width:45%;
 height:80vh;
 display:flex;
 flex-direction: column;
 letter-spacing: 1.1px;
+
 }
 .det-ails{
 
@@ -61,4 +63,33 @@ table {
   
     margin-top:2rem; 
 
+  }
+  @media(max-width:960px){
+      .img-bird{
+          flex-direction: column;
+          overflow-x: hidden;
+      }
+      .mide{
+          display: none;
+          
+      }
+      .bird-img{
+          width:100%;
+          margin:2rem 3rem;
+      }
+      .text-end{
+          width:100%;
+          
+          margin-bottom: 2rem;
+      }
+      
+   
+  }
+  @media (max-width:450px){
+      .bird-img{
+          height:auto;
+      }
+      .text-end{
+          width: 100%;
+      }
   }
