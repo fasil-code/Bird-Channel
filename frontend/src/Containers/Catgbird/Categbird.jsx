@@ -32,8 +32,9 @@ function Categbird() {
       </div>
       <div className="bird_categ">
         {birdCateg.map((val, key) => {
+          let value="/bird/categ/ibird?id=" + val.b_id;
           return (
-            <Link to="/ibird">
+            <Link to={value}>
               <Card image={"http://localhost:3001/"+val.b_image.slice(10)} title={val.b_name} content={val.b_desc} />
             </Link>
           );

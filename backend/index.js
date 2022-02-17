@@ -92,7 +92,7 @@ app.post('/getbirds', async (req, res) => {
     try {
         const c_id = req.body.c_id;
 
-        const sql = "SELECT b_name, b_desc, b_image FROM birds WHERE birds.b_categ = ?;";
+        const sql = "SELECT b_id, b_name, b_desc, b_image FROM birds WHERE birds.b_categ = ?;";
         con.query(sql, [c_id], (err, result) => {
             if (err) throw err;
             res.send(result);

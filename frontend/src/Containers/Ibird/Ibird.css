@@ -1,0 +1,64 @@
+.img-bird{
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height:80vh;
+  padding:0.5rem 1.5rem;
+  background-color: var(--color-black);
+}
+.bird-img{
+    width:45%;
+    height:60vh;
+ border-radius:5px;
+ border:3px solid white;
+    display:flex;
+ 
+    object-fit: cover;
+}
+
+.ibird-img{
+    width:100%;
+    object-fit: cover;
+}
+.mid{
+    width:1px;
+    height:80vh;
+    text-decoration: dashed;
+    background-color: white;
+}
+.text-end h1{
+    font-family: var(--font-base);
+}
+.text-end{
+color:var(--color-golden);
+text-align:center;
+width:45%;
+height:80vh;
+display:flex;
+flex-direction: column;
+letter-spacing: 1.1px;
+}
+.det-ails{
+
+margin: auto;
+margin-top: 1rem;
+
+}
+
+table,th,td {
+    border: 1px solid white;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 5px;
+  
+ }
+  th,td{
+      padding: 15px;
+      text-align: left;
+  }
+  .audiot{
+  
+    margin-top:2rem; 
+
+  }

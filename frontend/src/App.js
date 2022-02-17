@@ -12,6 +12,7 @@ import Categbird from "./Containers/Catgbird/Categbird";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./Containers/AboutUs/About";
+import Ibird from "./Containers/Ibird/Ibird";
 function App() {
 
   return (
@@ -19,13 +20,14 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Homek />} />
-          <Route path="/contact" element={<Contactm />} />
+      {/* //    <Route path="/contact" element={<Contactm />} /> */}
           <Route path="/bird" element={<Birds />} />
           <Route path="/conservation" element={<Birding />} />
           <Route path="/birding" element={<Birding />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/about" element={<About />} />
           <Route path="/bird/categ" element={<Categbird />} />
+          <Route path="/contact" element={<Ibird />} />
        
         </Routes>
       </div>

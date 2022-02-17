@@ -45,6 +45,7 @@
 
   transform: scaleX(0);
 }
+
 .app__openans a:hover {
   color: var(--color-white);
   opacity: 0.8;
