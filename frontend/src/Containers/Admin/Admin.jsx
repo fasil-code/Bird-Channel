@@ -25,13 +25,13 @@ const Admin = () => {
     data.append("b_desc", desc);
     data.append("b_image", image.selectedFile);
     data.append("b_categ", Category);
-    Axios.post("http://localhost:3001/admin", data).then(() => {
+    Axios.post("http://"+window.location.hostname+":3001/admin", data).then(() => {
       console.log("suces");
     });
   };
 
   useEffect(() => {
-    Axios.get("http://localhost:3001/admin").then((response) =>
+    Axios.get("http://"+window.location.hostname+":3001/admin").then((response) =>
       setCategorylist(response.data)
     );
   }, []);

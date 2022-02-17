@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 function Birds() {
   const [cardData, setCarddata] = useState([]);
   useEffect(() => {
-    Axios.get("http://localhost:3001/bird").then((response) =>
+    Axios.get("http://"+window.location.hostname+":3001/bird").then((response) =>
       setCarddata(response.data)
     );
   }, []);
@@ -30,7 +30,7 @@ function Birds() {
           return (
            <Link to={value}>
             <Card
-           image={"http://localhost:3001/"+val.c_image.slice(10)}
+           image={"http://"+window.location.hostname+":3001/"+val.c_image.slice(10)}
            title={val.c_name}
            content={val.c_desc}
            />
