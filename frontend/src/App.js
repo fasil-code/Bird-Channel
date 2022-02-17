@@ -11,6 +11,7 @@ import { useState } from "react";
 import Categbird from "./Containers/Catgbird/Categbird";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
+import About from "./Containers/AboutUs/About";
 function App() {
 
   return (
@@ -23,7 +24,7 @@ function App() {
           <Route path="/conservation" element={<Birding />} />
           <Route path="/birding" element={<Birding />} />
           <Route path="/admin" element={<Admin />} />
-          <Route path="/#contact" element={<Contactm />} />
+          <Route path="/about" element={<About />} />
           <Route path="/bird/categ" element={<Categbird />} />
        
         </Routes>

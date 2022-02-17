@@ -1,0 +1,33 @@
+.ap__ab{
+ 
+    background-color:#f5f5f5;
+}
+.ap__ab h1{
+    text-align: center;
+    padding-top:2rem;
+    font-family:var(--font-base);
+
+}
+.ap__content{
+    display:flex;
+    margin:0rem 15rem;
+   letter-spacing: 1.1px;
+    font-size: 18px;
+    padding:2rem 2rem;
+    line-height: 25px;
+    vertical-align: middle;
+}
+@media (max-width:1200px){
+    .ap__content{
+margin:1rem 5rem;
+      
+   
+    }
+}
+@media (max-width:600px){
+    .ap__content{
+margin:1rem 2rem;
+      
+   
+    }
+}

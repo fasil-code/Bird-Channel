@@ -16,7 +16,7 @@ function Navbar(props) {
         <Link to="/">Home</Link>
         </p>
         <p className="app__openans">
-          <a href="#about">About</a>
+          <a href="/about">About</a>
         </p>
         <p className="app__openans">
           <a href="/admin">Admin</a>
