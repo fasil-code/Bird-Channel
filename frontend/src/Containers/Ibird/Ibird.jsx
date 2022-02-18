@@ -1,10 +1,42 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Card from '../../components/Card/Card'
 import Footer from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar/Navbar'
 import images from '../../constants/images'
+import ReactPaginate from 'react-paginate';
+import Pagination from '../../components/Pagi/Pagi'
 import "./Ibird.css"
+import Posts from '../Post/Post'
+import axios from "axios"
 function Ibird() {
+  
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(6);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      setLoading(true);
+      const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
+      setPosts(res.data);
+      setLoading(false);
+    };
+
+    fetchPosts();
+  }, []);
+
+  // Get current posts
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
+  // Change page
+  const paginate = pageNumber => setCurrentPage(pageNumber);
+
+
   return (
+
     <div>
 <Navbar/>
 <div className="  img-bird  ">
@@ -46,7 +78,7 @@ function Ibird() {
 
 <audio controls autoplay >
 <source src={images.ar} type="audio/ogg"/>
-<source src="horse.mp3" type="audio/mpeg"/>
+
 Your browser does not support the audio element.
 </audio>
 </div> 
@@ -56,6 +88,19 @@ Your browser does not support the audio element.
  
 </div>
 
+<div >
+<Posts posts={currentPosts} loading={loading} />
+</div>
+    <div className="pagenation">
+      <Pagination
+    
+        postsPerPage={postsPerPage}
+        totalPosts={posts.length}
+        paginate={paginate}
+      />
+    
+
+</div>
 
 
 <Footer/>

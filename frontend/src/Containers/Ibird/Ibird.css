@@ -64,6 +64,8 @@ table {
     margin-top:2rem; 
 
   }
+
+ 
   @media(max-width:960px){
       .img-bird{
           flex-direction: column;
