@@ -64,7 +64,11 @@ table {
     margin-top:2rem; 
 
   }
-
+.pagenation{
+    display: flex;
+    justify-content: center;
+ 
+}
  
   @media(max-width:960px){
       .img-bird{

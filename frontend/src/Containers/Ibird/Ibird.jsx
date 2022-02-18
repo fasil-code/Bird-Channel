@@ -4,7 +4,7 @@ import Footer from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar/Navbar'
 import images from '../../constants/images'
 import ReactPaginate from 'react-paginate';
-import Pagination from '../../components/Pagi/Pagi'
+
 import "./Ibird.css"
 import Posts from '../Post/Post'
 import axios from "axios"
