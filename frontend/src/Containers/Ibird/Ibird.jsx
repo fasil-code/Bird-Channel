@@ -4,8 +4,6 @@ import Footer from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar/Navbar'
 import images from '../../constants/images'
 import ReactPaginate from 'react-paginate';
-import Popup from 'reactjs-popup';
-import 'reactjs-popup/dist/index.css';
 import "./Ibird.css"
 import Posts from '../Post/Post'
 import axios from "axios"
@@ -88,8 +86,11 @@ function Ibird() {
 
 Your browser does not support the audio element.
 </audio>
-<Container triggerText={triggerText} onSubmit={onSubmit} />
+
 </div> 
+<div className='pop-bt'>
+<Container triggerText={triggerText} onSubmit={onSubmit} />
+</div>
   </div>
 
 </div>
@@ -116,7 +117,7 @@ Your browser does not support the audio element.
             </li>
           }
 
-          {(currentPage <= Math.ceil(posts.length / postsPerPage))?
+          {(currentPage < Math.ceil(posts.length / postsPerPage))?
             <li key={currentPage+1} className='page-item'>
               <a onClick={() => paginate(currentPage+1)}  className='page-link'>
                 Next

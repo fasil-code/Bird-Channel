@@ -69,7 +69,9 @@ table {
     justify-content: center;
  
 }
- 
+ .pop-bt{
+     margin-top:1rem;
+ }
   @media(max-width:960px){
       .img-bird{
           flex-direction: column;
