@@ -4,12 +4,19 @@ import Footer from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar/Navbar'
 import images from '../../constants/images'
 import ReactPaginate from 'react-paginate';
-
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 import "./Ibird.css"
 import Posts from '../Post/Post'
 import axios from "axios"
+import Container from '../../components/Container/Container'
 function Ibird() {
-  
+  const triggerText = 'Open form';
+  const onSubmit = (event) => {
+    event.preventDefault(event);
+    console.log(event.target.name.value);
+    console.log(event.target.email.value);
+  };
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
@@ -81,6 +88,7 @@ function Ibird() {
 
 Your browser does not support the audio element.
 </audio>
+<Container triggerText={triggerText} onSubmit={onSubmit} />
 </div> 
   </div>
 
