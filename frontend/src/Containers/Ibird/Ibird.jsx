@@ -92,12 +92,37 @@ Your browser does not support the audio element.
 <Posts posts={currentPosts} loading={loading} />
 </div>
     <div className="pagenation">
-      <Pagination
-    
-        postsPerPage={postsPerPage}
-        totalPosts={posts.length}
-        paginate={paginate}
-      />
+      <nav>
+      <ul className='pagination'>
+          {(currentPage > 1)?
+            <li key={currentPage-1} className='page-item'>
+              <a onClick={() => paginate(currentPage-1)}  className='page-link'>
+                Prev
+              </a>
+            </li>
+          :
+            <li className='page-item'>
+              <a className='page-link'>
+                Prev
+              </a>
+            </li>
+          }
+
+          {(currentPage <= Math.ceil(posts.length / postsPerPage))?
+            <li key={currentPage+1} className='page-item'>
+              <a onClick={() => paginate(currentPage+1)}  className='page-link'>
+                Next
+              </a>
+            </li>
+          :
+            <li className='page-item'>
+              <a className='page-link'>
+                Next
+              </a>
+            </li>
+          }
+      </ul>
+    </nav>
     
 
 </div>
