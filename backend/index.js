@@ -146,8 +146,8 @@ app.post('/postbirduploads', async (req, res) => {
             const u_image_path = './uploads/birds/' + b_id + '/' + u_image.name;
             u_image.mv(u_image_path);
 
-            const sql = "INSERT INTO bird_uploads (u_photographer, u_location, u_date, u_desc, u_image, b_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-            con.query(sql, [u_photographer, u_location, u_date, u_desc, u_image, b_id], (err, result) => {
+            const sql = "INSERT INTO bird_uploads (u_photographer, u_location, u_date, u_desc, u_image, b_id) VALUES (?, ?, ?, ?, ?, ?)";
+            con.query(sql, [u_photographer, u_location, u_date, u_desc, u_image_path, b_id], (err, result) => {
                 if(err)console.log(err);
                 else {
                     res.send({
