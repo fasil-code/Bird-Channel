@@ -43,8 +43,9 @@ letter-spacing: 1.1px;
 }
 .det-ails{
 
-margin: auto;
+margin:auto;
 margin-top: 1rem;
+justify-content: center;
 
 }
 
@@ -52,8 +53,12 @@ table,th,td {
     border: 1px solid white;
 }
 table {
+
     border-collapse: separate;
     border-spacing: 5px;
+    margin-left: auto;
+    margin-right: auto;
+
   
  }
   th,td{

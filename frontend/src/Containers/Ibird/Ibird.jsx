@@ -57,19 +57,22 @@ function Ibird() {
 
     <div>
 <Navbar/>
+{
+birdData.map((val, key) => {
+  return(
 <div className="img-bird">
 <div className='bird-img'>
 
- 
-<img className='ibird-img' src={images.sliderb}></img>
+
+  <img className='ibird-img' src={"http://"+window.location.hostname+":3001/"+val.b_image.slice(10)}></img>
+
+
 
 </div>
 <div className="mide">
 
 </div>
-{
-birdData.map((val, key) => {
-  return(
+
 <div className='text-end'>
 
   
@@ -113,14 +116,14 @@ Your browser does not support the audio element.
 </div>
   </div>
   </div>
-  )
-}
-  )}
+
 
 
 
 </div>
-
+)}
+)
+}
 <div >
 <Posts posts={currentPosts} loading={loading} />
 </div>

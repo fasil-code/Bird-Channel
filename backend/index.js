@@ -106,7 +106,7 @@ app.post('/getbirddata', async (req, res) => {
     try {
         const b_id = req.body.b_id;
 
-        const sql = "SELECT b_name, b_cname, b_food, b_prey, b_habitat, b_desc, b_image FROM birds WHERE birds.b_categ = ?;";
+        const sql = "SELECT b_name, b_cname, b_food, b_prey, b_habitat, b_desc, b_image FROM birds WHERE birds.b_id= ?;";
         con.query(sql, [b_id], (err, result) => {
             if (err) throw err;
             res.send(result);
