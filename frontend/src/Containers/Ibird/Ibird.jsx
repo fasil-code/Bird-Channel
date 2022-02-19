@@ -36,7 +36,7 @@ function Ibird() {
   useEffect(() => {
     const fetchPosts = async () => {
       setLoading(true);
-      const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
+      const res = await axios.post("http://"+window.location.hostname+":3001/getbirduploads", {b_id: b_id});
       setPosts(res.data);
       setLoading(false);
     };
@@ -112,7 +112,7 @@ Your browser does not support the audio element.
 
 </div> 
 <div className='pop-bt'>
-<Container triggerText={triggerText} onSubmit={onSubmit} />
+<Container triggerText={triggerText} bId={b_id} onSubmit={onSubmit} />
 </div>
   </div>
   </div>

@@ -2,13 +2,12 @@ import React from 'react';
 import { useState } from "react";
 import Axios from "axios";
 
-export const Form = ({ onSubmit }) => {
+export const Form = ({ triggerText, bId, onSubmit }) => {
   const [uName, setuName] = useState("");
   const [uDate, setuDate] = useState("");
   const [uLocation, setuLocation] = useState("");
   const [uDesc, setuDesc] = useState("");
   const [uImage, setuImage] = useState("");
-  // b_id = ???
 
   const addBirdUpload = () => {
     const data = new FormData();
@@ -17,7 +16,7 @@ export const Form = ({ onSubmit }) => {
     data.append("u_location", uLocation);
     data.append("u_desc", uDesc);
     data.append("u_image", uImage.selectedFile);
-    // data.append("b_id", b_id); ???
+    data.append("b_id", bId);
     Axios.post("http://"+window.location.hostname+":3001/postbirduploads", data).then(() => {
       console.log("suces");
     });

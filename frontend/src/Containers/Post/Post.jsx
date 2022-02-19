@@ -9,8 +9,7 @@ const Posts = ({ posts, loading }) => {
   return (
     <ul className='bird_categ'>
       {posts.map(post => (
-       <Card title={post.title}/>
-      
+       <Card image={"http://"+window.location.hostname+":3001/"+post.u_image.slice(10)} title={"Name: " + post.u_photographer} content={"Location: " + post.u_location + ", Date: " + post.u_date + ", Description: " + post.u_desc}/>
       ))}
     </ul>
   );
