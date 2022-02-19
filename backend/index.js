@@ -116,6 +116,20 @@ app.post('/getbirddata', async (req, res) => {
     }
 });
 
+app.post('/getbirduploads', async (req, res) => {
+    try {
+        const b_id = req.body.b_id;
+
+        const sql = "SELECT u_photographer, u_location, u_date, u_desc, u_image FROM bird_uploads WHERE bird_uploads.b_id = ?;";
+        con.query(sql, [b_id], (err, result) => {
+            if (err) throw err;
+            res.send(result);
+        });
+    } catch (err) {
+        res.status(500).send(err);
+    }
+});
+
 
 app.listen(port, () => {
     console.log(`App is listening on PORT ${port}`)
