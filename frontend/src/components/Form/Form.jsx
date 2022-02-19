@@ -8,9 +8,26 @@ export const Form = ({ onSubmit }) => {
         <input className="form-control" id="name" />
       </div>
       <div className="form-group">
+      <input type='date'
+      className="form-control"
+       />
+      </div>
+      <div className="form-group">
+        <label htmlFor="location">Location</label>
+        <input className="form-control" id="name" />
+      </div>
+      <div className="form-group">
+      <textarea
+                          class="form-control"
+                          rows="3"
+                          placeholder="Description"
+                          name="message"
+                        ></textarea>
+                        </div>
+      <div className="form-group">
       <label for="myfile">Select image</label>
                           <input
-                          className="form-control"
+                        
                             type="file"
                             id="myfile"
                             name="myfile"
@@ -18,17 +35,7 @@ export const Form = ({ onSubmit }) => {
                            
                           />
                           </div>
-                          <div className="form-group">
-                     <label for="myfile">Select sound</label>
-                          <input
-                          className="form-control"
-                            type="file"
-                            id="myfile"
-                            name="myfile"
-                            accept="audio/*"
-                           
-                          />    
-                          </div>   
+                      
       <div className="form-group">
         <button className="form-control btn btn-primary" type="submit">
           Submit
