@@ -112,7 +112,7 @@ Your browser does not support the audio element.
 
 </div> 
 <div className='pop-bt'>
-<Container triggerText={triggerText} bId={b_id} onSubmit={onSubmit} />
+<Container triggerText={triggerText} onSubmit={onSubmit} />
 </div>
   </div>
   </div>
