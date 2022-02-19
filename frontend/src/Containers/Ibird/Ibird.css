@@ -30,6 +30,7 @@
     font-family: var(--font-base);
     padding:10px;
 }
+
 .text-end{
 color:var(--color-golden);
 text-align: center;
@@ -94,10 +95,15 @@ table {
    
   }
   @media (max-width:450px){
+   .img-bird{
+       min-height:100vh;
+       padding-bottom: 4rem;
+   }
       .bird-img{
           height:auto;
       }
       .text-end{
           width: 100%;
+         
       }
   }

@@ -44,7 +44,7 @@ function Ibird() {
 
     <div>
 <Navbar/>
-<div className="  img-bird  ">
+<div className="img-bird">
 <div className='bird-img'>
 <img className='ibird-img' src={images.sliderb}></img>
 </div>
@@ -119,13 +119,13 @@ Your browser does not support the audio element.
 
           {(currentPage < Math.ceil(posts.length / postsPerPage))?
             <li key={currentPage+1} className='page-item'>
-              <a onClick={() => paginate(currentPage+1)}  className='page-link'>
+              <a  onClick={() => paginate(currentPage+1)}  className='page-link'>
                 Next
               </a>
             </li>
           :
             <li className='page-item'>
-              <a className='page-link'>
+              <a className='page-link '>
                 Next
               </a>
             </li>

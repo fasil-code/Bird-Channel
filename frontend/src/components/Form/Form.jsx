@@ -8,14 +8,27 @@ export const Form = ({ onSubmit }) => {
         <input className="form-control" id="name" />
       </div>
       <div className="form-group">
-        <label htmlFor="email">Email address</label>
-        <input
-          type="email"
-          className="form-control"
-          id="email"
-          placeholder="name@example.com"
-        />
-      </div>
+      <label for="myfile">Select image</label>
+                          <input
+                          className="form-control"
+                            type="file"
+                            id="myfile"
+                            name="myfile"
+                            accept="image/*"
+                           
+                          />
+                          </div>
+                          <div className="form-group">
+                     <label for="myfile">Select sound</label>
+                          <input
+                          className="form-control"
+                            type="file"
+                            id="myfile"
+                            name="myfile"
+                            accept="audio/*"
+                           
+                          />    
+                          </div>   
       <div className="form-group">
         <button className="form-control btn btn-primary" type="submit">
           Submit
