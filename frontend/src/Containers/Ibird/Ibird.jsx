@@ -6,7 +6,7 @@ import images from '../../constants/images'
 import ReactPaginate from 'react-paginate';
 import {useParams} from 'react-router-dom';
 import "./Ibird.css"
-import { Axios  } from 'axios'
+
 import Posts from '../Post/Post'
 import axios from "axios"
 import Container from '../../components/Container/Container'
@@ -22,15 +22,15 @@ function Ibird() {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(6);
   const [birdData, setbirdData] = useState([]);
-  const {id} = useParams();
+  
   const queryParams = new URLSearchParams(window.location.search)
   const b_id = queryParams.get("id")
 
   useEffect((props) => {
-    Axios.post("http://"+window.location.hostname+":3001/getbirddata",{
+    axios.post("http://"+window.location.hostname+":3001/getbirddata",{
       b_id: b_id
     }).then((response)=>{
-    console.log(response.data);
+    setbirdData(response.data);
     })
   }, []);
   useEffect(() => {
@@ -59,16 +59,23 @@ function Ibird() {
 <Navbar/>
 <div className="img-bird">
 <div className='bird-img'>
+
+ 
 <img className='ibird-img' src={images.sliderb}></img>
+
 </div>
 <div className="mide">
 
 </div>
+{
+birdData.map((val, key) => {
+  return(
 <div className='text-end'>
-  <h1>Bird Name</h1>
+
+  
+  <h1>{val.b_name}</h1>
   <p>
-    Helloo wdefrtgyhtrewer vertyjhtgefdftrgyh werjmjrfthn wertghr4
-  swdeftghy sedrfghjnmjhgfds sderftgyhjhgfdeswsdfbhnjgfedws
+   {val.b_desc}
   </p>
   <div className="det-ails">
 
@@ -76,18 +83,18 @@ function Ibird() {
    
         <tr>
             <td>Food</td>
-            <td>Grains  Worms  Wheat  Beans</td>
+            <td>{val.b_food}</td>
          
         </tr>
         <tr>
            
             <td>Prey</td>
-            <td>Grains  Worms  Wheat  Beans</td>
+            <td>{val.b_prey}</td>
         </tr>
         <tr>
            
             <td>Habitat</td>
-            <td>Grains  Worms  Wheat  Beans</td>
+            <td>{val.b_habitat}</td>
             
         </tr>
     </table>
@@ -105,9 +112,13 @@ Your browser does not support the audio element.
 <Container triggerText={triggerText} onSubmit={onSubmit} />
 </div>
   </div>
+  </div>
+  )
+}
+  )}
 
-</div>
- 
+
+
 </div>
 
 <div >
