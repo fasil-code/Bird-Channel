@@ -9,7 +9,7 @@ export const Form = ({ onSubmit }) => {
   const [uDesc, setuDesc] = useState("");
   const [uImage, setuImage] = useState("");
 
-  const addBirdUpload = () => {
+  const addBirdUpload = ({Trigger}) => {
     const data = new FormData();
     data.append("u_photographer", uName);
     data.append("u_date", uDate);
@@ -20,7 +20,7 @@ export const Form = ({ onSubmit }) => {
     const b_id = queryParams.get("id")
     data.append("b_id", b_id);
     Axios.post("http://"+window.location.hostname+":3001/postbirduploads", data).then(() => {
-      console.log("suces");
+  console.log("sucess")  ;
     });
   };
 
