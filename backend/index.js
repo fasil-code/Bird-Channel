@@ -24,7 +24,7 @@ const port = 3001
 var con = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "Zargar@123",
+    password: "toor",
     database:"birdchannel"
 });
 
@@ -51,7 +51,6 @@ app.post('/admin', async (req, res) => {
             const b_desc = req.body.b_desc;
             const b_categ = req.body.b_categ;
             const b_image = req.files.b_image;
-            console.log(req.files.b_image)
             const b_image_path = './uploads/birds/' + b_image.name;
             b_image.mv(b_image_path);
 
@@ -120,7 +119,7 @@ app.post('/getbirduploads', async (req, res) => {
     try {
         const b_id = req.body.b_id;
 
-        const sql = "SELECT u_photographer, u_location, u_date, u_desc, u_image FROM bird_uploads WHERE bird_uploads.b_id = ?;";
+        const sql = "SELECT u_photographer, u_location, u_date, u_desc, u_image FROM bird_uploads WHERE bird_uploads.b_id = ? ORDER BY u_date DESC;";
         con.query(sql, [b_id], (err, result) => {
             if (err) throw err;
             res.send(result);
@@ -129,6 +128,40 @@ app.post('/getbirduploads', async (req, res) => {
         res.status(500).send(err);
     }
 });
+
+app.post('/postbirduploads', async (req, res) => {
+    try {
+        if(!req.files.u_image) {
+            res.send({
+                status: false,
+                message: 'No file uploaded'
+            });
+        } else {
+            const b_id = req.body.b_id;
+            const u_photographer = req.body.u_photographer;
+            const u_location = req.body.u_location;
+            const u_date = req.body.u_date;
+            const u_desc = req.body.u_desc;
+            const u_image = req.files.u_image;
+            const u_image_path = './uploads/birds/' + b_id + '/' + u_image.name;
+            u_image.mv(u_image_path);
+
+            const sql = "INSERT INTO bird_uploads (u_photographer, u_location, u_date, u_desc, u_image, b_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+            con.query(sql, [u_photographer, u_location, u_date, u_desc, u_image, b_id], (err, result) => {
+                if(err)console.log(err);
+                else {
+                    res.send({
+                        status: true,
+                        message: 'Values inserted/file uploaded',
+                    });
+                }
+            });
+        }
+    } catch (err) {
+        res.status(500).send(err);
+    }
+});
+
 
 app.listen(port, () => {
     console.log(`App is listening on PORT ${port}`)
