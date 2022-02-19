@@ -4,7 +4,9 @@ import Footer from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar/Navbar'
 import images from '../../constants/images'
 import ReactPaginate from 'react-paginate';
+import {useParams} from 'react-router-dom';
 import "./Ibird.css"
+import { Axios  } from 'axios'
 import Posts from '../Post/Post'
 import axios from "axios"
 import Container from '../../components/Container/Container'
@@ -19,7 +21,18 @@ function Ibird() {
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(6);
+  const [birdData, setbirdData] = useState([]);
+  const {id} = useParams();
+  const queryParams = new URLSearchParams(window.location.search)
+  const b_id = queryParams.get("id")
 
+  useEffect((props) => {
+    Axios.post("http://"+window.location.hostname+":3001/getbirddata",{
+      b_id: b_id
+    }).then((response)=>{
+    console.log(response.data);
+    })
+  }, []);
   useEffect(() => {
     const fetchPosts = async () => {
       setLoading(true);
