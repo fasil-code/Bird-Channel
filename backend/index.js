@@ -36,7 +36,7 @@ con.connect(function(err) {
 
 
 app.post('/admin', async (req, res) => {
-    // try {
+    try {
         if(!req.files.b_image) {
             res.send({
                 status: false,
@@ -73,9 +73,9 @@ app.post('/admin', async (req, res) => {
                 }
             });
         }
-    // } catch (err) {
-    //     res.status(500).send(err);
-    // }
+    } catch (err) {
+        res.status(500).send(err);
+    }
 });
 
 
