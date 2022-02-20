@@ -24,7 +24,7 @@ const port = 3001
 var con = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "Zargar@123",
+    password: "toor",
     database:"birdchannel"
 });
 
@@ -53,9 +53,17 @@ app.post('/admin', async (req, res) => {
             const b_image = req.files.b_image;
             const b_image_path = './uploads/birds/' + b_image.name;
             b_image.mv(b_image_path);
+            const b_audio = req.files.b_audio;
+            var b_audio_path = null;
+            console.log(b_audio)
+            if (req.files.b_audio) {
+                var b_audio_path = './uploads/birds/' + b_audio.name;
+                b_audio.mv(b_audio_path);
+            }
 
-            const sql = "INSERT INTO birds (b_name, b_cname, b_food, b_prey, b_habitat, b_desc, b_image, b_categ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-            con.query(sql, [b_name, b_cname, b_food, b_prey, b_habitat, b_desc, b_image_path, b_categ], (err, result) => {
+            const sql = "INSERT INTO birds (b_name, b_cname, b_food, b_prey, b_habitat, b_desc, b_image, b_audio, b_categ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            console.log(sql)
+            con.query(sql, [b_name, b_cname, b_food, b_prey, b_habitat, b_desc, b_image_path, b_audio_path, b_categ], (err, result) => {
                 if(err)console.log(err);
                 else {
                     res.send({
@@ -105,7 +113,7 @@ app.post('/getbirddata', async (req, res) => {
     try {
         const b_id = req.body.b_id;
 
-        const sql = "SELECT b_name, b_cname, b_food, b_prey, b_habitat, b_desc, b_image FROM birds WHERE birds.b_id= ?;";
+        const sql = "SELECT b_name, b_cname, b_food, b_prey, b_habitat, b_desc, b_image, b_audio FROM birds WHERE birds.b_id= ?;";
         con.query(sql, [b_id], (err, result) => {
             if (err) throw err;
             res.send(result);

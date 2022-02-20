@@ -3,8 +3,8 @@ import "./Card2.css"
 import moment from "moment";
 
 function Card2(props) {
-  let dete=  moment.utc(props.date).format('MM/DD/YY');
- 
+  let dete = moment.utc(props.date).format('DD/MM/YYYY');
+
   return(
     <div class="card">
       <div class="card-header">
