@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+}
+card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: #f7f8fc;
+  font-family: "Roboto", sans-serif;
+  color: #10182f;
+}
+
+/* .container {
+  display: flex;
+
+  justify-content: space-around;
+
+} */
+.card {
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  height: 400px;
+  box-shadow:rgb(0 0 0 / 100%) 30px 26px 30px -10px,
+  rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+  transition-duration:600ms;
+  overflow: hidden;
+  width: 300px;
+  background: url('../../assets/wood3.jpg');
+
+  
+}
+.card a{
+  text-decoration: none;
+}
+.card:hover{
+    /* box-shadow:rgba(17, 12, 12, 0.85) 0px 26px 30px -10px,
+    rgba(8, 6, 6, 0.73) 0px 16px 10px -10px; */
+    transform:scale(1.05);
+  cursor:pointer;
+
+  text-decoration: none;
+}
+.card-header img {
+  padding-top: 5px;
+
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  align-items: flex-start;
+  padding: 10px 20px;
+  
+}
+
+
+
+
+.card-body p {
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+.user {
+  display: flex;
+  margin-top: auto;
+}
+
+.user img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.user-info h5 {
+  margin: 0;
+}
+.user-info small {
+  color: #545d7a;
+}
+@media (max-width:950px){
+  .card{
+width:360px;
+height:470px;
+display: flex;
+margin-left:7px;
+margin-right:7px;
+padding : 0 0.2rem; 
+cursor:pointer;
+padding:10px 5px;
+  }
+  .h3{
+    font-size: 24px;
+
+  }
+  .card-body p{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .card-header img{
+    padding:0 0;
+    width:100%;
+  }
+  .card:hover{
+    transform: none;
+  }
+ 
+} 
+@media (max-width:370px){
+  .card{
+width:300px;
+height:410px;
+display: flex;
+margin-left:auto;
+margin-right:auto;
+  }
+  .h3{
+    font-size:20px;
+
+  }
+  .card-body p{
+    font-size: 18px;
+  }
+  .card-header img{
+   
+    height:175px;
+    width:100%;
+    
+  }
+ 
+} 

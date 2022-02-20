@@ -24,7 +24,7 @@ const port = 3001
 var con = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "toor",
+    password: "Zargar@123",
     database:"birdchannel"
 });
 
