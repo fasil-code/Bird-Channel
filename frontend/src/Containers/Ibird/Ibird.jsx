@@ -105,7 +105,7 @@ birdData.map((val, key) => {
     <div className="audiot">
 
 <audio controls autoplay >
-<source src={images.ar} type="audio/ogg"/>
+<source src={val.b_audio?"http://"+window.location.hostname+":3001/"+val.b_audio.slice(10):""} type="audio/ogg"/>
 
 Your browser does not support the audio element.
 </audio>

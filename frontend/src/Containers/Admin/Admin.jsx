@@ -14,6 +14,7 @@ const Admin = () => {
   const [habitat, sethabitat] = useState("");
   const [desc, setdesc] = useState("");
   const [image, setimage] = useState("");
+  const [audio, setaudio] = useState("");
   const [categoryList, setCategorylist] = useState([]);
   const addCard = () => {
     const data = new FormData();
@@ -24,9 +25,10 @@ const Admin = () => {
     data.append("b_habitat", habitat);
     data.append("b_desc", desc);
     data.append("b_image", image.selectedFile);
+    data.append("b_audio", audio.selectedFile);
     data.append("b_categ", Category);
     Axios.post("http://"+window.location.hostname+":3001/admin", data).then(() => {
-      console.log("suces");
+      console.log("success");
     });
   };
 
@@ -136,7 +138,10 @@ const Admin = () => {
                               }}
                             ></textarea>
                           </div>
-                          <label for="myfile">Select image</label>
+                          
+                          <div>
+                          <label for="myfile">Select Image:</label>
+                          <br/>
                           <input
                             type="file"
                             id="myfile"
@@ -146,6 +151,20 @@ const Admin = () => {
                               setimage({ selectedFile: event.target.files[0] });
                             }}
                           />
+                          </div>
+                          <div>
+                          <label for="myaudio">Select Audio:</label>
+                          <br/>
+                          <input
+                            type="file"
+                            id="myaudio"
+                            name="myaudio"
+                            accept="audio/*"
+                            onChange={(event) => {
+                              setaudio({ selectedFile: event.target.files[0] });
+                            }}
+                          />
+                          </div>
                         </div>
 
                         <div className="col-lg-12">
