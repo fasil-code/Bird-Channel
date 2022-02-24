@@ -55,14 +55,12 @@ app.post('/admin', async (req, res) => {
             b_image.mv(b_image_path);
             const b_audio = req.files.b_audio;
             var b_audio_path = null;
-            console.log(b_audio)
             if (req.files.b_audio) {
-                var b_audio_path = './uploads/birds/' + b_audio.name;
+                b_audio_path = './uploads/birds/' + b_audio.name;
                 b_audio.mv(b_audio_path);
             }
 
             const sql = "INSERT INTO birds (b_name, b_cname, b_food, b_prey, b_habitat, b_desc, b_image, b_audio, b_categ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-            console.log(sql)
             con.query(sql, [b_name, b_cname, b_food, b_prey, b_habitat, b_desc, b_image_path, b_audio_path, b_categ], (err, result) => {
                 if(err)console.log(err);
                 else {
