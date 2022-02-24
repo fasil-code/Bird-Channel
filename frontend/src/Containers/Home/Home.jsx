@@ -11,19 +11,23 @@ const Homek = () => {
 
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
+var timeoutFunction=()=>{};
+function fetchResult(event){
+  const searchWord = event.target.value;
+  setWordEntered(searchWord);
+  const newFilter = Data.filter((value) => {
+    return value.title.toLowerCase().includes(searchWord.toLowerCase());
+  });
 
+  if (searchWord === "") {
+    setFilteredData([]);
+  } else {
+    setFilteredData(newFilter);
+  }
+};
   const handleFilter = (event) => {
-    const searchWord = event.target.value;
-    setWordEntered(searchWord);
-    const newFilter = Data.filter((value) => {
-      return value.title.toLowerCase().includes(searchWord.toLowerCase());
-    });
-
-    if (searchWord === "") {
-      setFilteredData([]);
-    } else {
-      setFilteredData(newFilter);
-    }
+   clearTimeout(timeoutFunction);
+   timeoutFunction=setTimeout(fetchResult,2000,event);
   };
   return (
     <div>
@@ -60,7 +64,7 @@ const Homek = () => {
      { 
       filteredData.map((value,key)=>{
 return (
-<a className="dataItem">
+<a className="dataItem" href="google.com">
 <p>{value.title}</p></a>
 
 )
