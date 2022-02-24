@@ -169,6 +169,24 @@ app.post('/postbirduploads', async (req, res) => {
 });
 
 
+app.post('/search', async (req, res) => {
+    try {
+        const s_query = req.body.s_query;
+
+        console.log(s_query);
+
+        const sql = "SELECT b_id, b_name FROM birds WHERE birds.b_name LIKE ?;";
+        con.query(sql, ["%"+s_query+"%"], (err, result) => {
+            if(err)console.log(err);
+            res.send(result);
+        });
+
+    } catch (err) {
+        res.status(500).send(err);
+    }
+});
+
+
 app.listen(port, () => {
     console.log(`App is listening on PORT ${port}`)
 });

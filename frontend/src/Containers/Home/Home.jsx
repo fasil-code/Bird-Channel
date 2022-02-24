@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import "./Home.css";
 import images from "../../constants/images";
 import Home from "./imageslider";
+import Axios from "axios";
+import { useEffect } from "react";
 import Navbar from "../../components/Navbar/Navbar"
 import Footer from '../../components/Footer/Footer';
 import Cardall from "../Cardall/Cardall";
@@ -15,14 +17,15 @@ var timeoutFunction=()=>{};
 function fetchResult(event){
   const searchWord = event.target.value;
   setWordEntered(searchWord);
-  const newFilter = Data.filter((value) => {
-    return value.title.toLowerCase().includes(searchWord.toLowerCase());
-  });
 
   if (searchWord === "") {
     setFilteredData([]);
   } else {
-    setFilteredData(newFilter);
+    Axios.post("http://"+window.location.hostname+":3001/search", {s_query: searchWord}).then((response) => {
+      setFilteredData(response.data);
+      console.log(response.data);
+    }
+    );
   }
 };
   const handleFilter = (event) => {
@@ -63,9 +66,10 @@ function fetchResult(event){
   
      { 
       filteredData.map((value,key)=>{
+        const bird_url = "/bird/categ/ibird?id=" + value.b_id;
 return (
-<a className="dataItem" href="google.com">
-<p>{value.title}</p></a>
+<a className="dataItem" href={bird_url}>
+<p>{value.b_name}</p></a>
 
 )
       })
