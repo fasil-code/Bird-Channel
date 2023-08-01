@@ -2,6 +2,40 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Instructions
+### Setup
+```
+sudo apt update
+sudo apt install mysql-server
+sudo service mysql start
+sudo mysql
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+exit;
+
+cd backend
+npm install
+node create_database.js
+node create_table_categories.js 
+node create_table_birds.js 
+node create_table_bird_uploads.js
+
+cd ../frontend
+npm install
+```
+
+### Run
+#### Backend
+```
+cd backend
+node index.js
+```
+
+#### Frontend
+```
+cd frontend
+npm start
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
