@@ -26,6 +26,7 @@ npm install
 ### Run
 #### Backend
 ```
+sudo service mysql start
 cd backend
 node index.js
 ```
